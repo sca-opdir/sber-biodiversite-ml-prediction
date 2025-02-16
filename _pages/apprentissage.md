@@ -67,7 +67,29 @@ Pour vérifier s'il y avait un problème dans le modèle, j'ai répété l'analy
 
 J'ai ensuite vérifié les données, notamment s'il n'y avait pas de contamination (présence d'échantillons identiques dans les jeux de données d'entrainement et de test). J'ai également vérifié qu'il n'y avait aucun chevauchement de longitude/latitude entre les différents jeux de données. Finalement, j'ai également reproduit les analyses en sous-échantillonnant la catégorie surreprésentée afin d'évaluer si le déséquilibre de classes pouvait biaiser le résultat. Ces vérifications n'ont pas révélé d'anomalies et <span style="color: red;">des vérifications sont encore actuellement en cours pour éclaircir ce point et mieux comprendre les résultats obtenus</span>.
 
+résultat sur le set de données labellisées :
+
+true_label        PâtMoins    PâtPlus
+predicted_label                      
+PâtMoins         99.689200   0.310800
+PâtPlus           0.050176  99.949824
+true_label       PâtMoins  PâtPlus
+predicted_label                   
+PâtMoins            23094       72
+PâtPlus                42    83664
+
+[x/dt2pred.shape[0] for x in dt2pred['predicted_label'].value_counts()]
+[0.7801568048377456, 0.21984319516225434]
+
+
 #### Résultats de la prédiction
+
+[x/dt_scaled.shape[0] for x in dt_scaled['label'].value_counts()]
+[0.7835167302941837, 0.2164832697058163]
+
+predicted_label
+PâtPlus     44380
+PâtMoins    12506
 
 
 #### Evaluation de la prédiction
