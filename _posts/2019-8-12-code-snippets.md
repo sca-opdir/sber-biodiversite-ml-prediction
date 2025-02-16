@@ -34,9 +34,3 @@ console.log(minus(100,200))  // -100
 
 This is a Python snippet:
 
-```python
-def say_hello():
-    print("hello world!")
-
-say_hello()   // "hello world!"
-```
