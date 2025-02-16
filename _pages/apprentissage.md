@@ -27,7 +27,9 @@ Des analyses similaires ont été effectuées en utilisant directement les donn�
 
 ## Prédiction de la qualité (Plus/Moins) à partir des données satellites
 
-https://www.kaggle.com/code/mzufferey/ffn-sber-paturagev4-sentinel
+
+Les analyses décrites dans cette section ont été conduites depuis ce [notebook](https://www.kaggle.com/code/mzufferey/ffn-sber-paturagev4-sentinel).
+
 
 #### Le modèle neuronal
 
