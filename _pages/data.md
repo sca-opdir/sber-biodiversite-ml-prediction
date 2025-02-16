@@ -1,10 +1,9 @@
 ---
 layout: page
-title: Présentation du projet
-permalink: /presentation/
+title: Préparation des données
+permalink: /data/
 ---
 
-Prédiction de la qualité biologique des pâturages par machine learning : les différentes étapes 
 
 ### Préparation des données
 
@@ -34,7 +33,7 @@ La qualité biologique des pâturages étant déterminée lors des contrôles en
   <img src="/images/preparation_data_sweco25.png" alt="données SWECO25" width="200"/>
   <br>  
   <p align="center">
-    <i>Construction du jeu de données SWECO25 ([source](https://www.bafu.admin.ch/dam/bafu/fr/dokumente/biodiversitaet/praesentation/referat-antoine-guisan-bafu-tagung-30-11-23.pdf.download.pdf/Les%20mod%C3%A8les%20de%20distribution%20d%27esp%C3%A8ces%20pour%20prioriser%20l%27infrastructure%20%C3%A9cologique.pdf))</i>
+    <i>Construction du jeu de données SWECO25 (<a href="https://www.bafu.admin.ch/dam/bafu/fr/dokumente/biodiversitaet/praesentation/referat-antoine-guisan-bafu-tagung-30-11-23.pdf.download.pdf/Les%20mod%C3%A8les%20de%20distribution%20d%27esp%C3%A8ces%20pour%20prioriser%20l%27infrastructure%20%C3%A9cologique.pdf">source</a>)</i>
   </p>
 </div>
 
