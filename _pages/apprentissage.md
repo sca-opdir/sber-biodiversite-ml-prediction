@@ -15,6 +15,27 @@ Les analyses décrites dans cette section ont été conduites depuis ce [noteboo
 
 #### Le modèle neuronal
 
+J'ai utilisé le module `torch` pour construire un simple modèle neuronal à propagation avant. Les entrées du modèle sont les 21 variables environnementales. La couche de sortie, de taille 2, donne un score (logit) pour chacune des classes (PâtPlus/PâtMoins). La fonction softmax est ensuite utilisée pour convertir les scores bruts en probabilités, qui s'additionnent à 1 pour chaque échantillon. Le label prédit retenu est logiquement celui dans la valeur est supérieure à 0.5.
+
+Plusieurs valeurs ont été testées comme taille de la couche intermédiaire (32, 64, 128).
+
+```python
+class DropoutFeedForwardNN(nn.Module):
+    def __init__(self, input_size, hidden_size, output_size, dropout_rate=0.5):
+        super(DropoutFeedForwardNN, self).__init__()
+        self.fc1 = nn.Linear(input_size, hidden_size)
+        self.relu = nn.ReLU()
+        self.dropout = nn.Dropout(p=dropout_rate)  # Utilisation du taux passé en argument
+        self.fc2 = nn.Linear(hidden_size, output_size)
+
+    def forward(self, x):
+        out = self.fc1(x)
+        out = self.relu(out)
+        out = self.dropout(out)
+        out = self.fc2(out)
+        return out
+```
+
 #### Résultats de l'apprentissage
 
 #### Résultats de la prédiction
