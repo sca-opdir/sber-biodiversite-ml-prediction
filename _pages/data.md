@@ -55,6 +55,8 @@ Après avoir préparé les pixels des polygones avec les données de contrôle e
 
 Le but du modèle est de pouvoir prédire la qualité de pâturages n'ayant jamais été évalués sur le terrain. J'ai donc extrait des géodonnées cantonales tous les polygones des surfaces déclarées en pâturage en 2024 et soustrait de ces surfaces les zones déjà évaluées utilisées pour la construction du modèle. Puis, ces données ont été stockées dans un fichier .gdb et préparées comme les données de contrôle, à la différence évidente que celles-là n'étaient pas étiquetées.
 
+Au moment de l'évaluation du modèle neuronal, j'ai remarqué que, pour certains pixels, les variables environnementales constituaient des données aberrantes, ce qui faussait grandement le résultat. Ces lignes ont donc été filtrées avant de faire passer les entrées dans le réseau de neurones.
+
 ## Limites
 
 - les données des variables environnementales SWECO25 ne sont pas toujours très récentes (par exemple, pour gci, ndvi et ndwi, les données remontent à 2017)
