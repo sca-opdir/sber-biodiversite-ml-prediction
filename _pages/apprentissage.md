@@ -38,6 +38,22 @@ class DropoutFeedForwardNN(nn.Module):
 
 #### Résultats de l'apprentissage
 
+Je renvoie au [notebook](https://www.kaggle.com/code/mzufferey/sber-data-vm-p-turage-corrv4) pour les résultats détaillés. En bref, de façon attendue, augmenter la taille de la couche cachée améliore les résultats.
+
+<div align="center">
+  <img src="/images/train_val_auc_16-128.png" alt="Résultats couche cachée de 16 à 128 unités" width="200"/>
+</div>
+
+Les résultats obtenus, trop "parfaits" (ci-dessous : les courbes d'apprentissage pour une couche cachée de 128 neurones) pointent vers un problème dans les données ou dans l'implémentation de l'apprentissage. 
+
+<div align="center">
+  <img src="/images/all_curves_h128.png" alt="Résultats couche cachée de 16 à 128 unités" width="200"/>
+</div>
+
+Pour vérifier s'il y avait un problème dans le modèle, j'ai répété l'analyse en "randomizant" les labels des données d'entrainement. Comme attendu (espéré) dans ce cas-là, l'apprentissage peine à converger et la prédiction revient à un assignement aléatoire. Ceci semble indiquer quand le processus d'apprentissage est correctement implémenté.
+
+J'ai ensuite vérifié les données, notamment s'il n'y avait pas de contamination (présence d'échantillons identiques dans les jeux de données d'entrainement et de test).
+
 #### Résultats de la prédiction
 
 
