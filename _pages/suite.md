@@ -19,7 +19,7 @@ Pour étoffer ce projet, les différentes pistes de recherche ci-dessous sont en
     * répéter les analyses pour d'autres surfaces de promotion de la biodiversité (prairies notamment)
     * évaluer les avantages/désavantages à conduire les analyses pour tous les types de SPB de façon conjointe
 
-
+* obtenir la probabilité de présence des espèces végétales indicatrices avec florID
 
 #### Littérature d'intérêt pour poursuivre la réflexion :
 
