@@ -10,7 +10,7 @@ https://machinelearningknowledge.ai/
 https://www.deeplearningbook.org/
 https://online.stanford.edu/courses/cs231n-deep-learning-computer-vision?ref=blog.roboflow.com
 https://medium.com/ai-innovation/interactive-data-visualization-cd79927efc71
-
+https://martibosch.github.io/blog/
 
 
 #### 
