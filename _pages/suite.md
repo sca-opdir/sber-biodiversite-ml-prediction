@@ -6,6 +6,9 @@ title: Suite
 
 https://automating-gis-processes.github.io/
 
+
+http://www.eo4geo.eu/training/sentinel-2-data-and-vegetation-indices/
+
 #### Pistes de recherches futures
 
 Pour étoffer ce projet, les différentes pistes de recherche ci-dessous sont envisageables :
