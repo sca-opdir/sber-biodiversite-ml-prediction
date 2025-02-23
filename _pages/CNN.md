@@ -4,6 +4,15 @@ permalink: /cnn/
 title: CNN
 ---
 
+en cours de lecture : 
+https://blog.roboflow.com/latest/page/10/
+https://machinelearningknowledge.ai/
+https://www.deeplearningbook.org/
+https://online.stanford.edu/courses/cs231n-deep-learning-computer-vision?ref=blog.roboflow.com
+https://medium.com/ai-innovation/interactive-data-visualization-cd79927efc71
+
+
+
 #### 
  -> voir articles de https://viso.ai/blog/deep-learning/
 
@@ -24,10 +33,12 @@ https://blog.roboflow.com/instance-segmentation/
 mask r cnn notebooks
 https://github.com/matterport/Mask_RCNN?tab=readme-ov-file
 https://blog.roboflow.com/guide-to-yolo-models/
+https://github.com/open-mmlab/mmyolo
 https://machinelearningknowledge.ai/a-brief-history-of-yolo-object-detection-models/
 
 mask r cnn paper : https://arxiv.org/pdf/1703.06870
 
+https://github.com/RangeKing/deeplearning-models
 
 https://blog.roboflow.com/computer-vision-python-packages/
 
