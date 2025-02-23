@@ -4,6 +4,8 @@ permalink: /suite/
 title: Suite
 ---
 
+https://automating-gis-processes.github.io/
+
 #### Pistes de recherches futures
 
 Pour étoffer ce projet, les différentes pistes de recherche ci-dessous sont envisageables :
