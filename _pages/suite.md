@@ -21,6 +21,13 @@ Pour étoffer ce projet, les différentes pistes de recherche ci-dessous sont en
 
 * obtenir la probabilité de présence des espèces végétales indicatrices avec florID
 
+
+De manière plus générale, des méthodes de machine learning pourraient être utilisées pour les contrôles suivants
+
+* plausibilité des déclarations de codes de culture : *crop mapping*
+* présence d'arbres sur les parcelles déclarant des 921-925 : *tree detection*
+
+
 #### Littérature d'intérêt pour poursuivre la réflexion :
 
 * Weber, D., Schwieder, M., Ritter, L., Koch, T., Psomas, A., Huber, N., Ginzler, C., Boch, S.. ([2024](https://doi.org/10.1002/rse2.372)). Grassland-use intensity maps for Switzerland based on satellite time series: Challenges and opportunities for ecological applications. Remote Sensing in Ecology and Conservation, Volume 10, Issue 3, 312-327.
