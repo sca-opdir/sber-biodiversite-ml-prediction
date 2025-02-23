@@ -6,6 +6,8 @@ title: Suite
 
 https://automating-gis-processes.github.io/
 
+https://www.indexdatabase.de/db/is.php?sensor_id=96
+
 
 http://www.eo4geo.eu/training/sentinel-2-data-and-vegetation-indices/
 
