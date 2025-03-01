@@ -88,8 +88,9 @@ J'ai ensuite vérifié les données, notamment s'il n'y avait pas de contaminati
 <!-- [x/dt2pred.shape[0] for x in dt2pred['predicted_label'].value_counts()]
 [0.7801568048377456, 0.21984319516225434] -->
 
+En regardant la <a href="{{site.baseurl}}/images/all_curves_h128.png">distribution des variables environnementales</a>, on remarque que les pixels pour lesquelles la prédiction a été erronnée montrent un décalage des courbes pour les variables relatives au sol (edaph_eiv_r, edaph_eiv_n) et topographique (alti3d_aspect_median, alti3d_hillshade_median, alti3d_dem_median) qui pourrait peut-être expliquer en partie les difficultés de prédiction.
 
-#### Résultats de la prédiction
+#### Résultats de la prédiction sur les données sans label
 
 <!-- [x/dt_scaled.shape[0] for x in dt_scaled['label'].value_counts()]
 [0.7835167302941837, 0.2164832697058163] -->
