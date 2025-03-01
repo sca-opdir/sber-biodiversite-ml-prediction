@@ -125,5 +125,5 @@ Les analyses décrites dans cette section ont été conduites depuis ce [noteboo
 
 #### References
 
-* Lengerich B.,  Xing E. P. and Caruana R. Dropout as a Regularizer of Interaction Effect ([2022](https://proceedings.mlr.press/v151/lengerich22a/lengerich22a.pdf)). Proceedings of the 25th International Conference on Artificial Intelligence and Statistics (AISTATS), Valencia, Spain. PMLR: Volume 151.
+* Lengerich B.,  Xing E. P. and Caruana R. Dropout as a Regularizer of Interaction Effect ([2022](https://proceedings.mlr.press/v151/lengerich22a/lengerich22a.pdf)). Proceedings of the 25th International Conference on Artificial Intelligence and Statistics (AISTATS), Valencia, Spain. PMLR: Volume 151.
 
