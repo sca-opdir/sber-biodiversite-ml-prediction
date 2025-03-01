@@ -1,8 +1,10 @@
 ---
 layout: page
 permalink: /suite/
-title: Suite
+title: Suite et conclusion
 ---
+
+
 
 https://automating-gis-processes.github.io/
 
@@ -53,6 +55,10 @@ https://github.com/martibosch/swiss-urban-trees/blob/main/notebooks/train-crown.
 As noted in the user guide, the prebuilt model is trained on 400x400 images at a 10 cm resolution https://deepforest.readthedocs.io/en/v1.4.1/user_guide/10_better.html#check-patch-size
 
 https://github.com/martibosch/swisslandstats-geopy
+
+#### Conclusion
+
+Au final, il est évident que les travaux réalisés dans le cadre de ce projet souffrent de lacunes méthodologiques (choix des données, traitement des données, vérification des résultats, etc.) qui devront être comblées pour que les résultats produits soient réellement utilisables en pratique. Les pistes mentionnées ci-dessous devront être davantage approfondies. De façon importante, les analyses effectuées au cours de ces derniers mois m'ont surtout permis de me plonger dans le traitement des géodonnées. Elles m'ont également permis de prendre contact avec des personnalités du milieu académique (Dr Dominique Weber - WSL, Dr Helge Aasen - Agroscope) et ouvrent ainsi la voie vers de possibles collaborations et de futures investigations sous leur expertise.
 
 #### Littérature d'intérêt pour poursuivre la réflexion :
 
