@@ -11,7 +11,7 @@ Avant de plonger dans la mise en place des modèles neuronaux, il me semblait ut
 Par exemple, ci-dessous les résultats obtenus par analyse en composantes principales : 
 
 <div align="center">
-  <img src="/images/acp_predicteurs.png" alt="ACP sur les variables environnementales et poids des prédicteurs" width="200"/>
+  <img src="{{site.baseurl}}/images/acp_predicteurs.png" alt="ACP sur les variables environnementales et poids des prédicteurs" width="600"/>
 </div>
 
 
@@ -50,46 +50,55 @@ class DropoutFeedForwardNN(nn.Module):
 Je renvoie au [notebook](https://www.kaggle.com/code/mzufferey/sber-data-vm-p-turage-corrv4) pour les résultats détaillés. En bref, de façon attendue, augmenter la taille de la couche cachée améliore les résultats.
 
 <div align="center">
-  <img src="/images/train_val_auc_16-128.png" alt="Résultats couche cachée de 16 à 128 unités" width="200"/>
+  <img src="{{site.baseurl}}/images/train_val_auc_16-128.png" alt="Résultats couche cachée de 16 à 128 unités" width="600"/>
 </div>
 
 Les résultats obtenus, trop "parfaits" (ci-dessous : les courbes d'apprentissage pour une couche cachée de 128 neurones) pointent vers un problème dans les données ou dans l'implémentation de l'apprentissage. 
 
 <div align="center">
-  <img src="/images/all_curves_h128.png" alt="Courbes d'apprentissage pour la couche cachée de 128 unités" width="200"/>
+  <img src="{{site.baseurl}}/images/all_curves_h128.png" alt="Courbes d'apprentissage pour la couche cachée de 128 unités" width="600"/>
 </div>
 
 Pour vérifier s'il y avait un problème dans le modèle, j'ai répété l'analyse en "randomizant" les labels des données d'entrainement. Comme attendu (espéré) dans ce cas-là, l'apprentissage peine à converger et la prédiction revient à un assignement aléatoire. Ceci semble indiquer quand le processus d'apprentissage est correctement implémenté.
 
 <div align="center">
-  <img src="/images/Training Curves_random.png" alt="Courbes d'apprentissage pour les données 'randomizée'" width="200"/>
+  <img src="{{site.baseurl}}/images/Training Curves_random.png" alt="Courbes d'apprentissage pour les données 'randomizée'" width="600"/>
 </div>
 
 J'ai ensuite vérifié les données, notamment s'il n'y avait pas de contamination (présence d'échantillons identiques dans les jeux de données d'entrainement et de test). J'ai également vérifié qu'il n'y avait aucun chevauchement de longitude/latitude entre les différents jeux de données. Finalement, j'ai également reproduit les analyses en sous-échantillonnant la catégorie surreprésentée afin d'évaluer si le déséquilibre de classes pouvait biaiser le résultat. Ces vérifications n'ont pas révélé d'anomalies et <span style="color: red;">des vérifications sont encore actuellement en cours pour éclaircir ce point et mieux comprendre les résultats obtenus</span>.
 
-résultat sur le set de données labellisées :
+### Résultat sur le set de données labellisées
 
-true_label        PâtMoins    PâtPlus
-predicted_label                      
-PâtMoins         99.689200   0.310800
-PâtPlus           0.050176  99.949824
-true_label       PâtMoins  PâtPlus
-predicted_label                   
-PâtMoins            23094       72
-PâtPlus                42    83664
+**Taux de prédiction (%)**
 
-[x/dt2pred.shape[0] for x in dt2pred['predicted_label'].value_counts()]
-[0.7801568048377456, 0.21984319516225434]
+| true_label | PâtMoins | PâtPlus |
+| --- | ---: | ---: |
+| **predicted_label PâtMoins** | 99.69 | 0.31 |
+| **predicted_label PâtPlus** | 0.05 | 99.95 |
+
+**Nombre de prédictions (comptage)**
+
+| true_label  | PâtMoins | PâtPlus |
+| --- | ---: | ---: |
+| **predicted_label PâtMoins** | 23094 | 72 |
+| **predicted_label PâtPlus** | 42 | 83664 |
+
+
+
+<!-- [x/dt2pred.shape[0] for x in dt2pred['predicted_label'].value_counts()]
+[0.7801568048377456, 0.21984319516225434] -->
 
 
 #### Résultats de la prédiction
 
-[x/dt_scaled.shape[0] for x in dt_scaled['label'].value_counts()]
-[0.7835167302941837, 0.2164832697058163]
+<!-- [x/dt_scaled.shape[0] for x in dt_scaled['label'].value_counts()]
+[0.7835167302941837, 0.2164832697058163] -->
 
-predicted_label
-PâtPlus     44380
-PâtMoins    12506
+| predicted label  |   |
+| --- | ---: |
+| **PâtPlus** | 44380 |
+| **PâtMoins** | 12506 |
+
 
 
 #### Evaluation de la prédiction
