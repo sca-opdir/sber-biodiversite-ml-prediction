@@ -17,7 +17,8 @@ Les données initiales contenant les résultats de contrôles terrain des surfac
 
 <div align="center">
   <br>
-  <img src="/images/preparation_data_controles.png" alt="données pour l'entrainement" width="200"/>
+   <img src="{{site.baseurl}}/images/preparation_data_controles.png" alt="données pour l'entrainement" width="200"/>>
+  <!-- <img src="/images/preparation_data_controles.png" alt="données pour l'entrainement" width="200"/> -->
   <br>  
   <p align="center">
     <i>Exemples des données de contrôle à disposition</i>
