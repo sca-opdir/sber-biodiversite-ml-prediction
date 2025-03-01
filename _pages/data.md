@@ -15,7 +15,7 @@ Les données initiales contenant les résultats de contrôles terrain des surfac
 
 <div align="center">
   <br>
-   <img src="{{site.baseurl}}/images/preparation_data_controles.png" alt="données pour l'entrainement" width="200"/>>
+   <img src="{{site.baseurl}}/images/preparation_data_controles.png" alt="données pour l'entrainement" width="600"/>
   <!-- <img src="/images/preparation_data_controles.png" alt="données pour l'entrainement" width="200"/> -->
   <br>  
   <p align="center">
@@ -29,7 +29,7 @@ La qualité biologique des pâturages étant déterminée lors des contrôles en
 
 <div align="center">
   <br>
-  <img src="/images/preparation_data_sweco25.png" alt="données SWECO25" width="200"/>
+  <img src="{{site.baseurl}}/images/preparation_data_sweco25.png" alt="données SWECO25" width="600"/>
   <br>  
   <p align="center">
     <i>Construction du jeu de données SWECO25 (<a href="https://www.bafu.admin.ch/dam/bafu/fr/dokumente/biodiversitaet/praesentation/referat-antoine-guisan-bafu-tagung-30-11-23.pdf.download.pdf/Les%20mod%C3%A8les%20de%20distribution%20d%27esp%C3%A8ces%20pour%20prioriser%20l%27infrastructure%20%C3%A9cologique.pdf">source</a>)</i>
