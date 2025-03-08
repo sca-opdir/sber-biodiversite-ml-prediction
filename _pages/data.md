@@ -23,6 +23,10 @@ Les données initiales contenant les résultats de contrôles terrain des surfac
   </p>
 </div>
 
+Pour ce qui est des données à utiliser pour l'inférence, il s'est agi de récupérer les surfaces exploitées en pâturages qui ne se superposaient pas avec les données utilisées pour l'entrainement, le test et la validation et de procéder de façon similaire.
+
+Tous les scripts concernant la manipulation des géodonnées ont été rassemblés dans le dossier [code](https://github.com/sca-opdir/sber-biodiversite-ml-prediction/tree/main/code).
+
 ### Variables environnementales
    
 La qualité biologique des pâturages étant déterminée lors des contrôles en grande partie par leur composition botanique, les recherches en modélisation des communautés de plantes constituent une source d'inspiration évidente. C'est ainsi les travaux de Brun et al. ([2024](https://doi.org/10.1038/s41467-024-48559-9)) qui m'ont aiguillée sur le jeu de données SWECO25. Ce dernier fournit des cartes environnementales (>5'000 couches raster), à une résolution de 25m couvrant l'ensemble de la Suisse pour plus d'une trentaine de variables réparties dans 10 catégories (<a href="sweco25_details">voir la liste complète</a>). De façon quelque peu arbitraire, j'ai retenu les 21 variables qui me paraissaient les plus possiblement influantes sur la qualité biologique de surfaces herbagères.
