@@ -79,3 +79,27 @@ Afin de consolider les résultats obtenus avec ce jeu de données environnementa
 <div align="center">
   <img src="{{site.baseurl}}/images/logreg_results.png" alt="Résultats de la régression logistique avec un jeu restreint de prédicteurs" width="600"/>
 </div>
+
+
+Variables favorisant PâtPlus (pâturage élevé) :
+
+edaph_eiv_h (+3.61) : Fertilité élevée → pâturage plus important.
+edaph_modiffus_p (+8.08) : Phosphore du sol favorisant le pâturage.
+topo_alti3d_slope_median (+1.29) : Zones en pente plus pâturées.
+Variables favorisant PâtMoins (moins pâturé) :
+
+rs_sdc_2021_evi_mean (-185.45) : Indice de végétation élevé → Moins pâturé.
+rs_sdc_2017_ndvi_mean (-3.91) : Végétation dense → Moins pâturé.
+edaph_eiv_f (-3.23) : Sols humides → Moins pâturé.
+
+PâtPlus (classe positive, y=1) ou PâtMoins (y=0).
+
+Intercept (const)	90.08	Grande constante indiquant que la base du modèle favorise fortement PâtPlus.
+rs_sdc_2017_ndvi_mean	-3.91	Plus la végétation est dense en 2017 (NDVI élevé), plus c’est PâtMoins. Un NDVI élevé indique peu de stress végétal, ce qui peut suggérer une absence de pâturage intense.
+edaph_eiv_h	+3.61	Favorise PâtPlus. Une fertilité élevée des sols peut attirer plus de pâturage.
+topo_alti3d_aspect_median	-0.87	Influence négative sur PâtPlus, les orientations spécifiques du terrain peuvent limiter le pâturage (exemple : versants moins accessibles).
+edaph_eiv_f	-3.23	Plus le sol est humide (eiv_f élevé), moins la zone est pâturée (PâtMoins). Un sol trop humide peut être peu favorable au pâturage.
+rs_sdc_2021_evi_mean	-185.45	Très fort impact négatif : une augmentation de l'indice de végétation en 2021 (EVI) réduit fortement la probabilité d’être PâtPlus. Un EVI élevé peut signaler une végétation dense et peu pâturée.
+topo_alti3d_slope_median	+1.29	Plus la pente est forte, plus la zone est pâturée (PâtPlus). Contre-intuitif, mais pourrait s’expliquer par des espèces spécifiques adaptées aux zones en pente.
+edaph_modiffus_n	+0.17	Pas significatif (p=0.742), donc aucune interprétation fiable.
+edaph_modiffus_p	+8.08	Très forte influence positive sur PâtPlus. La richesse en phosphore favorise probablement la croissance d’herbes appétentes pour les herbivores.
