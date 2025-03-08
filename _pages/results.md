@@ -73,33 +73,14 @@ Afin de consolider les résultats obtenus avec ce jeu de données environnementa
 
  La concordance entre les résultats a été évaluée et s'est révélée plutôt faible ([notebook](https://www.kaggle.com/code/mzufferey/cmp-p-turages-output)). 
 
-
-
-
 <div align="center">
   <img src="{{site.baseurl}}/images/logreg_results.png" alt="Résultats de la régression logistique avec un jeu restreint de prédicteurs" width="600"/>
 </div>
 
+*Interprétation des résultats de la régression logistique*
+- L'intercept élevé montre que la base du modèle favorise la catégorisation PâtPlus, ce qui n'est pas surprenant étant donné le déséquilibre des classes (à noter que le *class imbalance* a été pris en compte pour la construction du modèle).
+- La probabilité d'être PâtPlus augmente lorsque les valeurs de pente (topo_alti3d_slope_median), humus (edaph_eiv_h) et surtout phosphore (edaph_modiffus_p) augmente. De façon intéressante, une méta-analyse a mis en évidence le lien entre disponibilité en phosphore du sol et diversité végétale ([Chen et al. 2022](https://doi.org/10.1038/s41559-022-01794-z)).
+- L'absence de qualité biologique est favorisée par une végétation dense (indices de végétation élevés ; toutefois leur interprétation n'est pas si [directe](https://docs.up42.com/help/spectral-indexes)) et une forte humidité du sol (edaph_eiv_f).
+- Ces résultats sont en partie en tout cas cohérents avec les observations de terrain.
 
-Variables favorisant PâtPlus (pâturage élevé) :
 
-edaph_eiv_h (+3.61) : Fertilité élevée → pâturage plus important.
-edaph_modiffus_p (+8.08) : Phosphore du sol favorisant le pâturage.
-topo_alti3d_slope_median (+1.29) : Zones en pente plus pâturées.
-Variables favorisant PâtMoins (moins pâturé) :
-
-rs_sdc_2021_evi_mean (-185.45) : Indice de végétation élevé → Moins pâturé.
-rs_sdc_2017_ndvi_mean (-3.91) : Végétation dense → Moins pâturé.
-edaph_eiv_f (-3.23) : Sols humides → Moins pâturé.
-
-PâtPlus (classe positive, y=1) ou PâtMoins (y=0).
-
-Intercept (const)	90.08	Grande constante indiquant que la base du modèle favorise fortement PâtPlus.
-rs_sdc_2017_ndvi_mean	-3.91	Plus la végétation est dense en 2017 (NDVI élevé), plus c’est PâtMoins. Un NDVI élevé indique peu de stress végétal, ce qui peut suggérer une absence de pâturage intense.
-edaph_eiv_h	+3.61	Favorise PâtPlus. Une fertilité élevée des sols peut attirer plus de pâturage.
-topo_alti3d_aspect_median	-0.87	Influence négative sur PâtPlus, les orientations spécifiques du terrain peuvent limiter le pâturage (exemple : versants moins accessibles).
-edaph_eiv_f	-3.23	Plus le sol est humide (eiv_f élevé), moins la zone est pâturée (PâtMoins). Un sol trop humide peut être peu favorable au pâturage.
-rs_sdc_2021_evi_mean	-185.45	Très fort impact négatif : une augmentation de l'indice de végétation en 2021 (EVI) réduit fortement la probabilité d’être PâtPlus. Un EVI élevé peut signaler une végétation dense et peu pâturée.
-topo_alti3d_slope_median	+1.29	Plus la pente est forte, plus la zone est pâturée (PâtPlus). Contre-intuitif, mais pourrait s’expliquer par des espèces spécifiques adaptées aux zones en pente.
-edaph_modiffus_n	+0.17	Pas significatif (p=0.742), donc aucune interprétation fiable.
-edaph_modiffus_p	+8.08	Très forte influence positive sur PâtPlus. La richesse en phosphore favorise probablement la croissance d’herbes appétentes pour les herbivores.
