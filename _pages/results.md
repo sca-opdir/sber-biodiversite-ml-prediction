@@ -36,7 +36,7 @@ En analysant la carte des erreurs de prédictions
 
 Par ailleurs, en regardant la <a href="{{site.baseurl}}/images/train2pred_correct-false_dist.png">distribution des variables environnementales</a>, on remarque que les pixels pour lesquelles la prédiction a été erronnée montrent un décalage des courbes pour les variables relatives au sol (edaph_eiv_r, edaph_eiv_n) et topographique (alti3d_aspect_median, alti3d_hillshade_median, alti3d_dem_median) qui pourrait peut-être expliquer en partie les difficultés de prédiction pour ces pixels-là.
 
-#### Résultats de la prédiction sur les données sans label
+## Résultats de la prédiction sur les données sans label
 
 Le modèle entrainé a ensuite été utilisé pour de l'inférence sur les pixels des polygones de pâturages jamais évalués sur le terrain.
 
@@ -63,15 +63,34 @@ Mais il faut toutefois reconnaitre que certains résultats sont plus difficiles 
 Il est prévu de confronter la carte des prédictions avec les résultats des contrôles terrain de cette année.
 
 
+## Importance des variables sur les poids du modèle
+
+Afin de tenter d'interpréter le modèle obtenu, j'ai regardé l'importance des variables prédictives en récupérant les poids de la première couche du modèle.
+
+
+<div align="center">
+  <img src="{{site.baseurl}}/images/importance_poids_modele.pn" alt="Poids des variables dans la première couche" width="600"/>
+</div>
+
+
+
 ## Analyses complémentaires
 
 Afin de consolider les résultats obtenus avec ce jeu de données environnementales, j'ai conduit des analyses similaires en adoptant d'autres approches méthodologiques
-* mêmes jeux de données mais en enlevant certaines variables environnementales prédictives (pour tester si la variable avec le plus d'importance pouvait "fausser" les résultats),
+* étant donné qu'une des variables dominait fortement dans les poids de la première couche, mêmes jeux de données mais en enlevant certaines variables environnementales prédictives (pour tester si la variable avec le plus d'importance pouvait "fausser" les résultats),
 * mêmes jeux de données mais une approche non neuronale, i.e. régression logistique ([notebook](https://www.kaggle.com/code/mzufferey/sber-data-logreg-p-turage)) ; les résultats montrant une certaine instabilité (absence de convergence), probablement due à la forte corrélation entre certains prédicteurs, j'ai répété l'analyse en enlevant les prédicteurs les plus fortement corrélés ([notebook](https://www.kaggle.com/code/mzufferey/sber-data-logreg-p-turage-lessvariables)),
 * remplacer les données de contrôles au format "polygones" par les données brutes type "relevés" ([notebook](https://www.kaggle.com/code/mzufferey/sber-nn-relev-s-p-t)),
 * remplacer les variables environnementales par des données sentinel-2 ([notebook](https://www.kaggle.com/code/mzufferey/ffn-sber-paturagev4-sentinel).
 
  La concordance entre les résultats a été évaluée et s'est révélée plutôt faible ([notebook](https://www.kaggle.com/code/mzufferey/cmp-p-turages-output)). 
+
+
+<div align="center">
+  <img src="{{site.baseurl}}/images/sentinel_apprentissage.png" alt="Résultats de la régression logistique avec un jeu restreint de prédicteurs" width="600"/>
+</div>
+
+
+
 
 <div align="center">
   <img src="{{site.baseurl}}/images/logreg_results.png" alt="Résultats de la régression logistique avec un jeu restreint de prédicteurs" width="600"/>
