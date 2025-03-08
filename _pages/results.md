@@ -67,12 +67,11 @@ Il est prévu de confronter la carte des prédictions avec les résultats des co
 
 Afin de tenter d'interpréter le modèle obtenu, j'ai regardé l'importance des variables prédictives en récupérant les poids de la première couche du modèle.
 
-
 <div align="center">
   <img src="{{site.baseurl}}/images/importance_poids_modele.pn" alt="Poids des variables dans la première couche" width="600"/>
 </div>
 
-
+Dans le quatuor de tête des variables les plus importantes, nous trouvons un indice de végétation (GCI ; teneur en chlorophylle), fortement dominant, la teneur en humus (edaph_eiv_h), la teneur en phosphore (edaph_modiffus_p) ainsi que l'humidité du sol (edaph_eiv_f). Cette analyse ne permet toute fois pas d'évaluer la direction de l'impact des prédicteurs (à comparer avec l'interprétation des résultats de la régression logistique).
 
 ## Analyses complémentaires
 
@@ -90,16 +89,14 @@ Afin de consolider les résultats obtenus avec ce jeu de données environnementa
 </div>
 
 
-
-
 <div align="center">
   <img src="{{site.baseurl}}/images/logreg_results.png" alt="Résultats de la régression logistique avec un jeu restreint de prédicteurs" width="600"/>
 </div>
 
 *Interprétation des résultats de la régression logistique*
 - L'intercept élevé montre que la base du modèle favorise la catégorisation PâtPlus, ce qui n'est pas surprenant étant donné le déséquilibre des classes (à noter que le *class imbalance* a été pris en compte pour la construction du modèle).
-- La probabilité d'être PâtPlus augmente lorsque les valeurs de pente (topo_alti3d_slope_median), humus (edaph_eiv_h) et surtout phosphore (edaph_modiffus_p) augmente. De façon intéressante, une méta-analyse a mis en évidence le lien entre disponibilité en phosphore du sol et diversité végétale ([Chen et al. 2022](https://doi.org/10.1038/s41559-022-01794-z)).
+- La probabilité d'être PâtPlus augmente lorsque les valeurs de pente (topo_alti3d_slope_median), humus (edaph_eiv_h) et surtout phosphore (edaph_modiffus_p) augmente. De façon intéressante, une méta-analyse a mis en évidence le lien entre disponibilité en phosphore du sol et diversité végétale ([Chen et al. 2022](https://doi.org/10.1038/s41559-022-01794-z)). 
 - L'absence de qualité biologique est favorisée par une végétation dense (indices de végétation élevés ; toutefois leur interprétation n'est pas si [directe](https://docs.up42.com/help/spectral-indexes)) et une forte humidité du sol (edaph_eiv_f).
-- Ces résultats sont en partie en tout cas cohérents avec les observations de terrain.
+- Ces résultats sont en partie en tout cas cohérents avec les observations de terrain. Il est intéressant de constater que parmi les variables qui semblent les plus impactantes pour la prédiction, certaines d'entre elles ressortaient déjà comme ayant le plus de poids dans le modèle neuronal (humus, humidité, phosphore).
 
 
