@@ -18,7 +18,7 @@ Par exemple, ci-dessous les résultats obtenus par analyse en composantes princi
 ## Prédiction de la qualité (Plus/Moins) à partir des variables environnementales
 
 Les analyses décrites dans cette section ont été conduites depuis ce [notebook](https://www.kaggle.com/code/mzufferey/sber-data-vm-p-turage-corrv4).
-
+ 
 #### Le modèle neuronal
 
 J'ai utilisé le module `torch` pour construire un simple modèle neuronal à propagation avant. Les entrées du modèle sont les 21 variables environnementales. La couche de sortie, de taille 2, donne un score (logit) pour chacune des classes (PâtPlus/PâtMoins). La fonction softmax est ensuite utilisée pour convertir les scores bruts en probabilités, qui s'additionnent à 1 pour chaque échantillon. Le label prédit retenu est logiquement celui dans la valeur est supérieure à 0.5.
