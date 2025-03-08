@@ -123,31 +123,20 @@ Mais il faut toutefois reconnaitre que certains résultats sont plus difficiles 
   <img src="{{site.baseurl}}/images/nevereval_weird.png" alt="Résultats des prédictions plus difficiles à interpréter" width="600"/>
 </div>
 
-#### Evaluation de la prédiction
-
 Il est prévu de confronter la carte des prédictions avec les résultats des contrôles terrain de cette année.
 
-Des analyses similaires ont été effectuées en utilisant directement les données de relevés ([notebook](https://www.kaggle.com/code/mzufferey/sber-nn-relev-s-p-t)) ainsi qu'en utilisant un modèle non neuronal (régression logistique, [notebook](https://www.kaggle.com/code/mzufferey/sber-data-logreg-p-turage)). La concordance entre les résultats a été évaluée et s'est révélée plutôt faible ([notebook](https://www.kaggle.com/code/mzufferey/cmp-p-turages-output)). 
 
+## Analyses complémentaires
 
-## Prédiction de la qualité (Plus/Moins) à partir des données satellites
+Afin de consolider les résultats obtenus avec ce jeu de données environnementales, j'ai conduit des analyses similaires en adoptant d'autres approches méthodologiques
+* mêmes jeux de données mais en enlevant certaines variables environnementales prédictives (pour tester si la variable avec le plus d'importance pouvait "fausser" les résultats),
+* mêmes jeux de données mais une approche non neuronale (régression logistique ; [notebook](https://www.kaggle.com/code/mzufferey/sber-data-logreg-p-turage)),
+* remplacer les données de contrôles au format "polygones" par les données brutes type "relevés" ([notebook](https://www.kaggle.com/code/mzufferey/sber-nn-relev-s-p-t)),
+* remplacer les variables environnementales par des données sentinel-2 ([notebook](https://www.kaggle.com/code/mzufferey/ffn-sber-paturagev4-sentinel).
 
+ La concordance entre les résultats a été évaluée et s'est révélée plutôt faible ([notebook](https://www.kaggle.com/code/mzufferey/cmp-p-turages-output)). 
 
-Les analyses décrites dans cette section ont été conduites depuis ce [notebook](https://www.kaggle.com/code/mzufferey/ffn-sber-paturagev4-sentinel).
-
-
-#### Le modèle neuronal
-
-
-#### Résultats de l'apprentissage
-
-#### Résultats de la prédiction
-
-
-#### Evaluation de la prédiction
-
-
-#### References
+## References
 
 * Lengerich B.,  Xing E. P. and Caruana R. Dropout as a Regularizer of Interaction Effect ([2022](https://proceedings.mlr.press/v151/lengerich22a/lengerich22a.pdf)). Proceedings of the 25th International Conference on Artificial Intelligence and Statistics (AISTATS), Valencia, Spain. PMLR: Volume 151.
 
