@@ -1,5 +1,5 @@
-username = "gablep"
-password = "epDir2020"
+username = "xxx"
+password = "xxx"
 
 import sys
 from arcgis.gis import GIS
@@ -32,7 +32,7 @@ if not arcpy.Exists(output_gdb):
     arcpy.management.CreateFileGDB(output_folder, outgdb_name)
 
 # Connexion au portail
-portal_url = "https://sit.vs.ch/portal/"
+portal_url = "xxx"
 gis = GIS(portal_url, username, password, use_gen_token=True)
 print("Logged in as: " + gis.properties.user.username)
 
