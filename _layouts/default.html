@@ -28,13 +28,13 @@
             </div>
 
             <nav>
-              <a href="{{ site.baseurl }}/">Home</a>
-              <a href="{{ site.baseurl }}/data">Données</a>
-              <a href="{{ site.baseurl }}/apprentissage">Apprentissage</a>
-              <a href="{{ site.baseurl }}/results">Résultats</a>
-                <a href="{{ site.baseurl }}/suite">Suite</a> 
-<a href="{{ site.baseurl }}/liens" {% if page.url contains "/liens" %}class="active"{% endif %}>Liens</a>
-                     <a href="{{ site.baseurl }}/about">A propos</a> 
+              <a href="{{ site.baseurl }}/" {% if page.url == "/" or page.url == "/sber-biodiversite-ml-prediction/" %}class="active"{% endif %}>Home</a>
+              <a href="{{ site.baseurl }}/data" {% if page.url contains "/data" %}class="active"{% endif %}>Données</a>
+              <a href="{{ site.baseurl }}/apprentissage" {% if page.url contains "/apprentissage" %}class="active"{% endif %}>Apprentissage</a>
+              <a href="{{ site.baseurl }}/results" {% if page.url contains "/results" %}class="active"{% endif %}>Résultats</a>
+              <a href="{{ site.baseurl }}/suite" {% if page.url contains "/suite" %}class="active"{% endif %}>Suite</a>
+              <a href="{{ site.baseurl }}/liens" {% if page.url contains "/liens" %}class="active"{% endif %}>Liens</a>
+              <a href="{{ site.baseurl }}/about" {% if page.url contains "/about" %}class="active"{% endif %}>A propos</a>
             </nav>
           </header>
         </div>
