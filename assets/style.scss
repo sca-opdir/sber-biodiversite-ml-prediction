@@ -359,12 +359,13 @@ nav {
       color: $blue;
     }
 
-    &.active {
+
+  }
+  &.active {
       color: blue; // Met en bleu l'onglet actif
       font-weight: bold; // Met en gras
       text-decoration: underline; // Facultatif : souligne
     }
-  }
 }
 //
 // .main
