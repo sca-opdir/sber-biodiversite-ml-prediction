@@ -93,7 +93,7 @@ Afin de consolider les résultats obtenus avec ce jeu de données environnementa
 * remplacer les variables environnementales par des données sentinel-2 (résolution 10 m ; [notebook](https://www.kaggle.com/code/mzufferey/ffn-sber-paturagev4-sentinel).
 
 <div align="center">
-  <img src="{{site.baseurl}}/images/sentinel_apprentissage.png" alt="Résultats de l'apprentissage avec les données Sentinel" width="600"/>
+  <img src="{{site.baseurl}}/images/sentinel_apprentissage_et_poids.png" alt="Résultats de l'apprentissage avec les données Sentinel" width="600"/>
 </div>
 
 ## Limites
