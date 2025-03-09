@@ -84,17 +84,19 @@ Afin de consolider les résultats obtenus avec ce jeu de données environnementa
 </div>
 
 *Interprétation des résultats de la régression logistique*
-- L'intercept élevé montre que la base du modèle favorise la catégorisation PâtPlus, ce qui n'est pas surprenant étant donné le déséquilibre des classes (à noter que le *class imbalance* a été pris en compte pour la construction du modèle).
-- La probabilité d'être PâtPlus augmente lorsque les valeurs de pente (topo_alti3d_slope_median), humus (edaph_eiv_h) et surtout phosphore (edaph_modiffus_p) augmente. De façon intéressante, une méta-analyse a mis en évidence le lien entre disponibilité en phosphore du sol et diversité végétale ([Chen et al. 2022](https://doi.org/10.1038/s41559-022-01794-z)). 
-- L'absence de qualité biologique est favorisée par une végétation dense (indices de végétation élevés ; toutefois leur interprétation n'est pas si [directe](https://docs.up42.com/help/spectral-indexes)) et une forte humidité du sol (edaph_eiv_f).
-- Ces résultats sont en partie en tout cas cohérents avec les observations de terrain. Il est intéressant de constater que parmi les variables qui semblent les plus impactantes pour la prédiction, certaines d'entre elles ressortaient déjà comme ayant le plus de poids dans le modèle neuronal (humus, humidité, phosphore).
+    - L'intercept élevé montre que la base du modèle favorise la catégorisation PâtPlus, ce qui n'est pas surprenant étant donné le déséquilibre des classes (à noter que le *class imbalance* a été pris en compte pour la construction du modèle).
+    - La probabilité d'être PâtPlus augmente lorsque les valeurs de pente (topo_alti3d_slope_median), humus (edaph_eiv_h) et surtout phosphore (edaph_modiffus_p) augmente. De façon intéressante, une méta-analyse a mis en évidence le lien entre disponibilité en phosphore du sol et diversité végétale ([Chen et al. 2022](https://doi.org/10.1038/s41559-022-01794-z)). 
+    - L'absence de qualité biologique est favorisée par une végétation dense (indices de végétation élevés ; toutefois leur interprétation n'est pas si [directe](https://docs.up42.com/help/spectral-indexes)) et une forte humidité du sol (edaph_eiv_f).
+    - Ces résultats sont en partie en tout cas cohérents avec les observations de terrain. Il est intéressant de constater que parmi les variables qui semblent les plus impactantes pour la prédiction, certaines d'entre elles ressortaient déjà comme ayant le plus de poids dans le modèle neuronal (humus, humidité, phosphore).
   
 * remplacer les données de contrôles au format "polygones" par les données brutes type "relevés" ([notebook](https://www.kaggle.com/code/mzufferey/sber-nn-relev-s-p-t)),
 * remplacer les variables environnementales par des données sentinel-2 (résolution 10 m ; [notebook](https://www.kaggle.com/code/mzufferey/ffn-sber-paturagev4-sentinel).
 
 <div align="center">
-  <img src="{{site.baseurl}}/images/sentinel_apprentissage_et_poids.png" alt="Résultats de l'apprentissage avec les données Sentinel" width="600"/>
+  <img src="{{site.baseurl}}/images/sentinel_apprentissage_et_poids.png" alt="Résultats de l'apprentissage avec les données Sentinel-2" width="600"/>
 </div>
+
+*Les bandes 1 à 4 correspondent aux bandes B4 (rouge), B3 (vert), B2 (bleu), B8 (proche infrarouge)*
 
 ## Limites
 
@@ -102,7 +104,7 @@ Afin de consolider les résultats obtenus avec ce jeu de données environnementa
 
 * Il pourrait être intéressant de répéter les analyses en variant le jeux des prédicteurs environnementaux retenus.
 
-* Il serait nécessaire d'agréger les données sentinel-2 à 25m pour pouvoir intégrer les données sentinel-2 et les données environnementales ; je n'ai pas eu le temps de conduire ces analyses.
+* Il serait nécessaire d'agréger les données sentinel-2 à 25m pour pouvoir intégrer les données Sentinel-2 et les données environnementales ; je n'ai pas eu le temps de conduire ces analyses.
 
-
+* Pour les données Sentinel-2, il serait intéresser de construire des indexe composites (par exemple, le NDVI qui combine les bandes spectrales B8 et B4), plutôt que de travailler uniquement avec les valeurs brutes des bandes.
 
