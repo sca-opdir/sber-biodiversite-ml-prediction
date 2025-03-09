@@ -352,14 +352,20 @@ nav {
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
+    text-decoration: none;
 
     @include mobile {
       margin: 0 10px;
       color: $blue;
     }
+
+    &.active {
+      color: blue; // Met en bleu l'onglet actif
+      font-weight: bold; // Met en gras
+      text-decoration: underline; // Facultatif : souligne
+    }
   }
 }
-
 //
 // .main
 //
