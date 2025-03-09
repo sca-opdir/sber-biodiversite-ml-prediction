@@ -77,17 +77,7 @@ Dans le quatuor de tête des variables les plus importantes, nous trouvons un in
 
 Afin de consolider les résultats obtenus avec ce jeu de données environnementales, j'ai conduit des analyses similaires en adoptant d'autres approches méthodologiques
 * étant donné qu'une des variables dominait fortement dans les poids de la première couche, mêmes jeux de données mais en enlevant certaines variables environnementales prédictives (pour tester si la variable avec le plus d'importance pouvait "fausser" les résultats),
-* mêmes jeux de données mais une approche non neuronale, i.e. régression logistique ([notebook](https://www.kaggle.com/code/mzufferey/sber-data-logreg-p-turage)) ; les résultats montrant une certaine instabilité (absence de convergence), probablement due à la forte corrélation entre certains prédicteurs, j'ai répété l'analyse en enlevant les prédicteurs les plus fortement corrélés ([notebook](https://www.kaggle.com/code/mzufferey/sber-data-logreg-p-turage-lessvariables)),
-* remplacer les données de contrôles au format "polygones" par les données brutes type "relevés" ([notebook](https://www.kaggle.com/code/mzufferey/sber-nn-relev-s-p-t)),
-* remplacer les variables environnementales par des données sentinel-2 (résolution 10 m ; [notebook](https://www.kaggle.com/code/mzufferey/ffn-sber-paturagev4-sentinel).
-
- La concordance entre les résultats a été évaluée et s'est révélée plutôt faible, par ex. moins de 50% entre les résultats de la régression logistique et le réseau de neurones initial ([notebook](https://www.kaggle.com/code/mzufferey/cmp-p-turages-output)). 
-
-
-<div align="center">
-  <img src="{{site.baseurl}}/images/sentinel_apprentissage.png" alt="Résultats de la régression logistique avec un jeu restreint de prédicteurs" width="600"/>
-</div>
-
+* mêmes jeux de données mais une approche non neuronale, i.e. régression logistique ([notebook](https://www.kaggle.com/code/mzufferey/sber-data-logreg-p-turage)) ; les résultats montrant une certaine instabilité (absence de convergence), probablement due à la forte corrélation entre certains prédicteurs, j'ai répété l'analyse en enlevant les prédicteurs les plus fortement corrélés ([notebook](https://www.kaggle.com/code/mzufferey/sber-data-logreg-p-turage-lessvariables)) ;
 
 <div align="center">
   <img src="{{site.baseurl}}/images/logreg_results.png" alt="Résultats de la régression logistique avec un jeu restreint de prédicteurs" width="600"/>
@@ -98,5 +88,15 @@ Afin de consolider les résultats obtenus avec ce jeu de données environnementa
 - La probabilité d'être PâtPlus augmente lorsque les valeurs de pente (topo_alti3d_slope_median), humus (edaph_eiv_h) et surtout phosphore (edaph_modiffus_p) augmente. De façon intéressante, une méta-analyse a mis en évidence le lien entre disponibilité en phosphore du sol et diversité végétale ([Chen et al. 2022](https://doi.org/10.1038/s41559-022-01794-z)). 
 - L'absence de qualité biologique est favorisée par une végétation dense (indices de végétation élevés ; toutefois leur interprétation n'est pas si [directe](https://docs.up42.com/help/spectral-indexes)) et une forte humidité du sol (edaph_eiv_f).
 - Ces résultats sont en partie en tout cas cohérents avec les observations de terrain. Il est intéressant de constater que parmi les variables qui semblent les plus impactantes pour la prédiction, certaines d'entre elles ressortaient déjà comme ayant le plus de poids dans le modèle neuronal (humus, humidité, phosphore).
+  
+* remplacer les données de contrôles au format "polygones" par les données brutes type "relevés" ([notebook](https://www.kaggle.com/code/mzufferey/sber-nn-relev-s-p-t)),
+* remplacer les variables environnementales par des données sentinel-2 (résolution 10 m ; [notebook](https://www.kaggle.com/code/mzufferey/ffn-sber-paturagev4-sentinel).
+
+<div align="center">
+  <img src="{{site.baseurl}}/images/sentinel_apprentissage.png" alt="Résultats de l'apprentissage avec les données Sentinel" width="600"/>
+</div>
+
+ La concordance entre les résultats a été évaluée et s'est révélée plutôt faible, par ex. moins de 50% entre les résultats de la régression logistique et le réseau de neurones initial ([notebook](https://www.kaggle.com/code/mzufferey/cmp-p-turages-output)). 
+
 
 
