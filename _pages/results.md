@@ -96,7 +96,13 @@ Afin de consolider les résultats obtenus avec ce jeu de données environnementa
   <img src="{{site.baseurl}}/images/sentinel_apprentissage.png" alt="Résultats de l'apprentissage avec les données Sentinel" width="600"/>
 </div>
 
- La concordance entre les résultats a été évaluée et s'est révélée plutôt faible, par ex. moins de 50% entre les résultats de la régression logistique et le réseau de neurones initial ([notebook](https://www.kaggle.com/code/mzufferey/cmp-p-turages-output)). 
+## Limites
+
+* La concordance entre les résultats a été évaluée et s'est révélée plutôt faible, par ex. moins de 50% entre les résultats de la régression logistique et le réseau de neurones initial ([notebook](https://www.kaggle.com/code/mzufferey/cmp-p-turages-output)). Il faudrait pousser plus loin l'analyse pour mieux comprendre l'origine de ces différences.
+
+* Il pourrait être intéressant de répéter les analyses en variant le jeux des prédicteurs environnementaux retenus.
+
+* Il serait nécessaire d'agréger les données sentinel-2 à 25m pour pouvoir intégrer les données sentinel-2 et les données environnementales ; je n'ai pas eu le temps de conduire ces analyses.
 
 
 
