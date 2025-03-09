@@ -4,22 +4,13 @@ permalink: /suite/
 title: Suite et conclusion
 ---
 
-
-
-https://automating-gis-processes.github.io/
-
-https://www.indexdatabase.de/db/is.php?sensor_id=96
-
-
-http://www.eo4geo.eu/training/sentinel-2-data-and-vegetation-indices/
-
-#### Pistes de recherches futures
+## Pistes de recherches futures
 
 Pour étoffer ce projet, les différentes pistes de recherche ci-dessous sont envisageables :
 
 * d'un point de vue méthodologique
     * combiner les variables environnementales et les données spatiales
-    * utiliser les données spatiales dans toutes leurs dimensions à l'aide d'un CNN
+    * utiliser les données spatiales dans toutes leurs dimensions à l'aide d'un CNN ou vision Transformer
     * formuler la problématique d'identification des surfaces avec qualité biologique comme un problème de segmentation à résoudre avec un CNN
     * mettre à profit la dimension temporelle
     * essayer d'autres méthodes non neuronales
@@ -33,34 +24,11 @@ Pour étoffer ce projet, les différentes pistes de recherche ci-dessous sont en
 
 De manière plus générale, des méthodes de machine learning pourraient être utilisées pour les contrôles suivants
 
-* plausibilité des déclarations de codes de culture : *crop mapping*
+* plausibilité des déclarations de codes de culture : *crop classification*
+* présence d'arbres sur les parcelles déclarant des arbres SPB : *tree detection* (essais préliminaires dans ce [notebook](https://www.kaggle.com/code/mzufferey/test-tree-detection))
 
-
-* présence d'arbres sur les parcelles déclarant des 921-925 : *tree detection*
-
-https://github.com/shmh40/detectreeRGB cited by https://acocac.github.io/environmental-ai-book/forest/modelling/forest-modelling-treecrown_detectree.html with tutorials
-
-
-* https://github.com/microsoft/torchgeo, https://torchgeo.readthedocs.io/en/stable/tutorials/pretrained_weights.html
-* 
-      * https://deepforest.readthedocs.io/en/v1.5.0/user_guide/11_training.html
-https://github.com/weecology/DeepForest_demos/blob/master/street_tree/StreetTrees.ipynb
-https://acocac.github.io/environmental-ai-book/forest/modelling/forest-modelling-treecrown_detectree.html
-
-  https://patball1.github.io/detectree2/tutorial_multi.html  
-https://patball1.github.io/detectree2/tutorial.html
-https://github.com/martibosch/detectree : data from from the SWISSIMAGE WMS !
-
-https://github.com/martibosch/swiss-urban-trees/blob/main/notebooks/train-crown.ipynb :
-As noted in the user guide, the prebuilt model is trained on 400x400 images at a 10 cm resolution https://deepforest.readthedocs.io/en/v1.4.1/user_guide/10_better.html#check-patch-size
-
-https://github.com/martibosch/swisslandstats-geopy
 
 #### Conclusion
 
 Au final, il est évident que les travaux réalisés dans le cadre de ce projet souffrent de lacunes méthodologiques (choix des données, traitement des données, vérification des résultats, etc.) qui devront être comblées pour que les résultats produits soient réellement utilisables en pratique. Les pistes mentionnées ci-dessous devront être davantage approfondies. De façon importante, les analyses effectuées au cours de ces derniers mois m'ont surtout permis de me plonger dans le traitement des géodonnées. Elles m'ont également permis de prendre contact avec des personnalités du milieu académique (Dr Dominique Weber - WSL, Dr Helge Aasen - Agroscope) et ouvrent ainsi la voie vers de possibles collaborations et de futures investigations sous leur expertise.
 
-#### Littérature d'intérêt pour poursuivre la réflexion :
-
-* Weber, D., Schwieder, M., Ritter, L., Koch, T., Psomas, A., Huber, N., Ginzler, C., Boch, S.. ([2024](https://doi.org/10.1002/rse2.372)). Grassland-use intensity maps for Switzerland based on satellite time series: Challenges and opportunities for ecological applications. Remote Sensing in Ecology and Conservation, Volume 10, Issue 3, 312-327.
-* Dollinger, J., Brun, P., Sainte Fare Garnot, V., and Wegner, J. D.. ([2024](https://doi.org/10.5194/isprs-annals-X-2-2024-41-2024)). Sat-SINR: High-Resolution Species Distribution Models Through Satellite Imagery. ISPRS Ann. Photogramm. Remote Sens. Spatial Inf. Sci., X-2-2024, 41–48.
