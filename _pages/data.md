@@ -25,7 +25,7 @@ Les données initiales contenant les résultats de contrôles terrain des surfac
 
 Pour ce qui est des données à utiliser pour l'inférence, il s'est agi de récupérer les surfaces exploitées en pâturages qui ne se superposaient pas avec les données utilisées pour l'entrainement, le test et la validation et de procéder de façon similaire.
 
-Tous les scripts concernant la manipulation des géodonnées ont été rassemblés dans le dossier [code](https://github.com/sca-opdir/sber-biodiversite-ml-prediction/tree/main/code).
+Tous les scripts concernant la manipulation des géodonnées et des variables environnementales ont été rassemblés dans le dossier [code](https://github.com/sca-opdir/sber-biodiversite-ml-prediction/tree/main/code).
 
 ### Variables environnementales
    
@@ -50,6 +50,8 @@ N'étant pas familière avec les données sentinel-2, l'acquisition et la prépa
 
 Ce jeu de données contient un nombre limité de bandes, mais présente l'avantage de pré-taiter les données sentinel-2, et notamment d'assembler les différentes "tiles" qui couvrent la Suisse. En fonction de l'orbite du satellite, le territoire valaisan n'est pas toujours couvert. J'ai visuellement identifié dans la [liste des couches disponibles](https://data.geo.admin.ch/browser/index.html#/collections/ch.swisstopo.swisseo_s2-sr_v100?.language=en) celles contenant le Valais entre mai et août, période que j'estimais la plus propice pour évaluer la végétation. Au final, j'ai téléchargé les donneés pour 10 jours (format .tif), échelonnés entre le 28 mai et le 21 août 2024. Après avoir isolé les pixels qui se superposaient avec les polygones des pâturages, j'ai calculé la couverture nuageuse moyenne et retenu le jour où celle-ci était la plus faible (06.08).
 
+Tous les scripts concernant la manipulation des géodonnées et des variables environnementales ont été rassemblés dans le dossier [code](https://github.com/sca-opdir/sber-biodiversite-ml-prediction/tree/main/code_sentinel).
+
 ### Assemblage des données de contrôle et environnementales (resp. satellites)
    
 Après avoir préparé les pixels des polygones avec les données de contrôle et les pixels des variables environnementales (resp. satellites), les deux sources de données ont été combinées en un fichier GDB où l'étiquette du pixel, ainsi que ses valeurs de variables environnementales (resp. satellites) sont stockées dans la table attributaire. 
@@ -62,7 +64,9 @@ Au moment de l'évaluation du modèle neuronal, j'ai remarqué que, pour certain
 
 ## Limites
 
-- les données des variables environnementales SWECO25 ne sont pas toujours très récentes (par exemple, pour gci, ndvi et ndwi, les données remontent à 2017) ; la résolution de 25m x 25m n'est pas très satisfaisante
+- les données des variables environnementales SWECO25 ne sont pas toujours très récentes (par exemple, pour gci, ndvi et ndwi, les données remontent à 2017)
+- la résolution de 25m x 25m des variables environnementales n'est pas très réjouissante (en comparaison avec la résolution à 10m des données satellites)
+- je ne suis pas certaine de la façon dont j'ai traité les données satellites (j'ai utilisé les fichiers "bands", mais d'autres fichiers "mask", etc. sont disponibles)
 
 ## Références
 
