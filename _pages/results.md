@@ -79,9 +79,9 @@ Afin de consolider les résultats obtenus avec ce jeu de données environnementa
 * étant donné qu'une des variables dominait fortement dans les poids de la première couche, mêmes jeux de données mais en enlevant certaines variables environnementales prédictives (pour tester si la variable avec le plus d'importance pouvait "fausser" les résultats),
 * mêmes jeux de données mais une approche non neuronale, i.e. régression logistique ([notebook](https://www.kaggle.com/code/mzufferey/sber-data-logreg-p-turage)) ; les résultats montrant une certaine instabilité (absence de convergence), probablement due à la forte corrélation entre certains prédicteurs, j'ai répété l'analyse en enlevant les prédicteurs les plus fortement corrélés ([notebook](https://www.kaggle.com/code/mzufferey/sber-data-logreg-p-turage-lessvariables)),
 * remplacer les données de contrôles au format "polygones" par les données brutes type "relevés" ([notebook](https://www.kaggle.com/code/mzufferey/sber-nn-relev-s-p-t)),
-* remplacer les variables environnementales par des données sentinel-2 ([notebook](https://www.kaggle.com/code/mzufferey/ffn-sber-paturagev4-sentinel).
+* remplacer les variables environnementales par des données sentinel-2 (résolution 10 m ; [notebook](https://www.kaggle.com/code/mzufferey/ffn-sber-paturagev4-sentinel).
 
- La concordance entre les résultats a été évaluée et s'est révélée plutôt faible ([notebook](https://www.kaggle.com/code/mzufferey/cmp-p-turages-output)). 
+ La concordance entre les résultats a été évaluée et s'est révélée plutôt faible, par ex. moins de 50% entre les résultats de la régression logistique et le réseau de neurones initial ([notebook](https://www.kaggle.com/code/mzufferey/cmp-p-turages-output)). 
 
 
 <div align="center">
