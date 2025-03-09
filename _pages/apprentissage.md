@@ -68,7 +68,7 @@ Pour vérifier s'il y avait un problème dans le modèle, j'ai répété l'analy
 J'ai ensuite vérifié les données, notamment s'il n'y avait pas de contamination (présence d'échantillons identiques dans les jeux de données d'entrainement et de test). J'ai également vérifié qu'il n'y avait aucun chevauchement de longitude/latitude entre les différents jeux de données. Finalement, j'ai également reproduit les analyses en sous-échantillonnant la catégorie surreprésentée afin d'évaluer si le déséquilibre de classes pouvait biaiser le résultat. Ces vérifications n'ont pas révélé d'anomalies et <span style="color: red;">des vérifications sont encore actuellement en cours pour éclaircir ce point et mieux comprendre les résultats obtenus</span>.
 
 
-## References
+## Références
 
 * Lengerich B.,  Xing E. P. and Caruana R. Dropout as a Regularizer of Interaction Effect ([2022](https://proceedings.mlr.press/v151/lengerich22a/lengerich22a.pdf)). Proceedings of the 25th International Conference on Artificial Intelligence and Statistics (AISTATS), Valencia, Spain. PMLR: Volume 151.
 
