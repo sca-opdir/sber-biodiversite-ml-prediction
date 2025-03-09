@@ -68,7 +68,7 @@ Il est prévu de confronter la carte des prédictions avec les résultats des co
 Afin de tenter d'interpréter le modèle obtenu, j'ai regardé l'importance des variables prédictives en récupérant les poids de la première couche du modèle.
 
 <div align="center">
-  <img src="{{site.baseurl}}/images/importance_poids_modele.pn" alt="Poids des variables dans la première couche" width="600"/>
+  <img src="{{site.baseurl}}/images/importance_poids_modele.png" alt="Poids des variables dans la première couche" width="600"/>
 </div>
 
 Dans le quatuor de tête des variables les plus importantes, nous trouvons un indice de végétation (GCI ; teneur en chlorophylle), fortement dominant, la teneur en humus (edaph_eiv_h), la teneur en phosphore (edaph_modiffus_p) ainsi que l'humidité du sol (edaph_eiv_f). Cette analyse ne permet toute fois pas d'évaluer la direction de l'impact des prédicteurs (à comparer avec l'interprétation des résultats de la régression logistique).
