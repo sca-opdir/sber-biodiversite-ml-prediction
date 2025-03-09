@@ -40,3 +40,8 @@ As noted in the user guide, the prebuilt model is trained on 400x400 images at a
 
 * EOdal : https://github.com/EOA-team/eodal_notebooks/tree/master
 
+#### Littérature d'intérêt pour poursuivre la réflexion :
+
+* Weber, D., Schwieder, M., Ritter, L., Koch, T., Psomas, A., Huber, N., Ginzler, C., Boch, S.. ([2024](https://doi.org/10.1002/rse2.372)). Grassland-use intensity maps for Switzerland based on satellite time series: Challenges and opportunities for ecological applications. Remote Sensing in Ecology and Conservation, Volume 10, Issue 3, 312-327.
+  
+* Dollinger, J., Brun, P., Sainte Fare Garnot, V., and Wegner, J. D.. ([2024](https://doi.org/10.5194/isprs-annals-X-2-2024-41-2024)). Sat-SINR: High-Resolution Species Distribution Models Through Satellite Imagery. ISPRS Ann. Photogramm. Remote Sens. Spatial Inf. Sci., X-2-2024, 41–48.
