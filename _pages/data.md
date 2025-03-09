@@ -66,8 +66,8 @@ Au moment de l'évaluation du modèle neuronal, j'ai remarqué que, pour certain
 
 ## Références
 
-Brun, P., Karger, D.N., Zurell, D. et al. Multispecies deep learning using citizen science data produces more informative plant community models. [Nat Commun 15, 4421 (2024)](https://doi.org/10.1038/s41467-024-48559-9). 
+* Brun, P., Karger, D.N., Zurell, D. et al. Multispecies deep learning using citizen science data produces more informative plant community models. [Nat Commun 15, 4421 (2024)](https://doi.org/10.1038/s41467-024-48559-9). 
 
-Guisan A. Les modèles de distribution d'espèces pour prioriser l'infrastructure écologique. Présentation dans le cadre de la BAFU Tagung | Journée de l’OFEV ([2023](https://www.bafu.admin.ch/dam/bafu/fr/dokumente/biodiversitaet/praesentation/referat-antoine-guisan-bafu-tagung-30-11-23.pdf.download.pdf/Les%20mod%C3%A8les%20de%20distribution%20d%27esp%C3%A8ces%20pour%20prioriser%20l%27infrastructure%20%C3%A9cologique.pdf)).
+* Guisan A. Les modèles de distribution d'espèces pour prioriser l'infrastructure écologique. Présentation dans le cadre de la BAFU Tagung, Journée de l’OFEV ([2023](https://www.bafu.admin.ch/dam/bafu/fr/dokumente/biodiversitaet/praesentation/referat-antoine-guisan-bafu-tagung-30-11-23.pdf.download.pdf/Les%20mod%C3%A8les%20de%20distribution%20d%27esp%C3%A8ces%20pour%20prioriser%20l%27infrastructure%20%C3%A9cologique.pdf)).
 
 
