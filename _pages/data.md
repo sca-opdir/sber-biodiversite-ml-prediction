@@ -67,6 +67,7 @@ Au moment de l'évaluation du modèle neuronal, j'ai remarqué que, pour certain
 - les données des variables environnementales SWECO25 ne sont pas toujours très récentes (par exemple, pour gci, ndvi et ndwi, les données remontent à 2017)
 - la résolution de 25m x 25m des variables environnementales n'est pas très réjouissante (en comparaison avec la résolution à 10m des données satellites)
 - je ne suis pas certaine de la façon dont j'ai traité les données satellites (j'ai utilisé les fichiers "bands", mais d'autres fichiers "mask", etc. sont disponibles)
+- difficultés à traiter les fichiers sentinel-2 10m résolution (code à optimiser)
 
 ## Références
 
