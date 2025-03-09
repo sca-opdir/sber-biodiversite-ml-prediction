@@ -53,6 +53,9 @@ Je renvoie au [notebook](https://www.kaggle.com/code/mzufferey/sber-data-vm-p-tu
   <img src="{{site.baseurl}}/images/train_val_auc_16-128.png" alt="Résultats couche cachée de 16 à 128 unités" width="600"/>
 </div>
 
+
+## Limite
+
 Les résultats obtenus, trop "parfaits" (ci-dessous : les courbes d'apprentissage pour une couche cachée de 128 neurones) pointent vers un problème dans les données ou dans l'implémentation de l'apprentissage. 
 
 <div align="center">
