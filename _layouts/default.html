@@ -33,7 +33,7 @@
               <a href="{{ site.baseurl }}/apprentissage">Apprentissage</a>
               <a href="{{ site.baseurl }}/results">Résultats</a>
                 <a href="{{ site.baseurl }}/suite">Suite</a> 
-<a href="{{ site.baseurl }}/liens" {% if page.url == "/liens/" or page.url == "/sber-biodiversite-ml-prediction/liens/" %}class="active"{% endif %}>Liens</a>
+<a href="{{ site.baseurl }}/liens" {% if page.url contains "/liens" %}class="active"{% endif %}>Liens</a>
                      <a href="{{ site.baseurl }}/about">A propos</a> 
             </nav>
           </header>
