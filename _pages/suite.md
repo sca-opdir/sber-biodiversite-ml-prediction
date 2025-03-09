@@ -28,7 +28,9 @@ De manière plus générale, des méthodes de machine learning pourraient être 
 * présence d'arbres sur les parcelles déclarant des arbres SPB : *tree detection* (essais préliminaires dans ce [notebook](https://www.kaggle.com/code/mzufferey/test-tree-detection))
 
 
-#### Conclusion
+## Conclusion
 
 Au final, il est évident que les travaux réalisés dans le cadre de ce projet souffrent de lacunes méthodologiques (choix des données, traitement des données, vérification des résultats, etc.) qui devront être comblées pour que les résultats produits soient réellement utilisables en pratique. Les pistes mentionnées ci-dessous devront être davantage approfondies. De façon importante, les analyses effectuées au cours de ces derniers mois m'ont surtout permis de me plonger dans le traitement des géodonnées. Elles m'ont également permis de prendre contact avec des personnalités du milieu académique (Dr Dominique Weber - WSL, Dr Helge Aasen - Agroscope) et ouvrent ainsi la voie vers de possibles collaborations et de futures investigations sous leur expertise.
+
+Le manque de temps et, surtout, celui d'appui et d'expertise constituent de facteurs limitants difficilement surpassables.
 
