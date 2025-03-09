@@ -360,7 +360,7 @@ nav {
     }
 
   &.active {
-      color: blue !important; // Met en bleu l'onglet actif
+      color: $blue !important; // Met en bleu l'onglet actif
       font-weight: bold; // Met en gras
       text-decoration: underline; // Facultatif : souligne
     }
