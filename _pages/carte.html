@@ -29,13 +29,13 @@
     // Définir un style basé sur l'attribut "label"
 // Définir un style basé sur predicted_label et correct_pred
 function getColor(predicted_label, correct_pred) {
-    if (predicted_label === "Moins" && correct_pred === true) {
+    if (predicted_label === "Moins" && correct_pred === "True") {
         return "#8B0000"; // Rouge foncé
-    } else if (predicted_label === "Moins" && correct_pred === false) {
+    } else if (predicted_label === "Moins" && correct_pred === "False") {
         return "#FF6666"; // Rouge clair fluo
-    } else if (predicted_label === "Plus" && correct_pred === true) {
+    } else if (predicted_label === "Plus" && correct_pred === "True") {
         return "#006400"; // Vert foncé
-    } else if (predicted_label === "Plus" && correct_pred === false) {
+    } else if (predicted_label === "Plus" && correct_pred === "False") {
         return "#99FF99"; // Vert clair fluo
     } else {
         return "#808080"; // Gris par défaut
