@@ -16,7 +16,7 @@
     }).addTo(map);
 
     // Charger le fichier GeoJSON et afficher les erreurs si besoin
-   fetch('trainpred_combined_pixels_withpred_FeaturesToJSO_sub.geojson')
+   fetch('trainpred_combined_pixels_withpred_FeaturesToJSO_sub_wgs84.geojson')
       .then(response => {
         console.log("Fetch response status:", response.status);
         if (!response.ok) {
