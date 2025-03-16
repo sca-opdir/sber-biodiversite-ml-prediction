@@ -1,31 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Carte Interactive avec Leaflet</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <style>
-        #map {
-            height: 600px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <title>ArcGIS sur GitHub test2</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <style>
+    /* Style de la légende */
+    .legend {
+      background: white;
+      padding: 10px;
+      line-height: 18px;
+      color: #555;
+      border-radius: 5px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
-    <div id="map"></div>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-        // Initialiser la carte
-        var map = L.map('map').setView([46.8182, 8.2275], 8); // Coordonnées de la Suisse
+  <div id="map" style="width: 100%; height: 600px;"></div>
 
-        // Ajouter une couche de tuiles OpenStreetMap
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+  <script>
+    var map = L.map('map').setView([46.2, 7.0], 10);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
 
-        // Ajouter un marqueur
-        var marker = L.marker([46.8182, 8.2275]).addTo(map);
-        marker.bindPopup("<b>Suisse</b><br>Un beau pays.").openPopup();
-    </script>
+    // Définir un style basé sur l'attribut "label"
+    function getColor(label) {
+        switch(label) {
+            case "Moins": return "#ff0000"; // Rouge
+            case "Plus": return "#00ff00"; // Vert
+            default: return "#808080"; // Gris par défaut
+        }
+    }
+
+    // Fonction de style appliquée aux polygones
+    function style(feature) {
+        return {
+            fillColor: getColor(feature.properties.predicted_label),
+            weight: 2,
+            opacity: 1,
+            color: "white",
+            fillOpacity: 0.7
+        };
+    }
+
+    // Ajouter la légende à la carte
+    var legend = L.control({ position: "bottomright" });
+
+    legend.onAdd = function (map) {
+        var div = L.DomUtil.create("div", "info legend"),
+            labels = ["Classe A", "Classe B", "Classe C"],
+            colors = ["#ff0000", "#00ff00", "#0000ff"];
+
+        div.innerHTML += "<strong>Légende</strong><br>";
+        for (var i = 0; i < labels.length; i++) {
+            div.innerHTML +=
+                '<i style="background:' + colors[i] + '; width: 18px; height: 18px; display: inline-block; margin-right: 5px;"></i> ' +
+                labels[i] + "<br>";
+        }
+        return div;
+    };
+
+    legend.addTo(map);
+
+    // Charger le fichier GeoJSON et appliquer le style
+    fetch('trainpred_combined_pixels_withpred_FeaturesToJSO_sub_wgs84.geojson')
+        .then(response => response.json())
+        .then(data => {
+            console.log("GeoJSON chargé :", data);
+            L.geoJSON(data, { style: style }).addTo(map);
+        })
+        .catch(error => {
+            console.error("Erreur lors du chargement du GeoJSON :", error);
+        });
+  </script>
+
 </body>
 </html>
