@@ -106,7 +106,7 @@ Afin de consolider les résultats obtenus avec ce jeu de données environnementa
 
 * Il pourrait être intéressant de répéter les analyses en variant le jeux des prédicteurs environnementaux retenus.
 
-* Il serait nécessaire d'agréger les données sentinel-2 à 25m pour pouvoir intégrer les données Sentinel-2 et les données environnementales ; je n'ai pas eu le temps de conduire ces analyses.
+* Il serait nécessaire d'agréger les données Sentinel-2 à 25m pour pouvoir intégrer les données Sentinel-2 et les données environnementales ; je n'ai pas eu le temps de conduire ces analyses.
 
 * Pour les données Sentinel-2, il serait intéresser de construire des indexe composites (par exemple, le NDVI qui combine les bandes spectrales B8 et B4), plutôt que de travailler uniquement avec les valeurs brutes des bandes.
 
