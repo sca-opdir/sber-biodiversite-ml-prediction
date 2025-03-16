@@ -77,7 +77,15 @@ function style(feature) {
         .then(response => response.json())
         .then(data => {
             console.log("GeoJSON chargé :", data);
-            L.geoJSON(data, { style: style }).addTo(map);
+          //  L.geoJSON(data, { style: style }).addTo(map);
+
+        // Ajouter les polygones à la carte
+        var geojsonLayer = L.geoJSON(data, { style: style }).addTo(map);
+
+        // Centrer la carte sur l'étendue des polygones
+        map.fitBounds(geojsonLayer.getBounds());
+
+          
         })
         .catch(error => {
             console.error("Erreur lors du chargement du GeoJSON :", error);
