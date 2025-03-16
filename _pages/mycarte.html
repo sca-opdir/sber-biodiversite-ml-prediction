@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Carte ArcGIS sur GitHub test</title>
+  <title>Carte ArcGIS sur GitHub test2</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
@@ -15,7 +15,7 @@
     }).addTo(map);
 
     // Charger le fichier GeoJSON
-   fetch('{{ site.baseurl }}/trainpred_combined_pixels_withpred_FeaturesToJSO_sub.geojson')
+   fetch('/trainpred_combined_pixels_withpred_FeaturesToJSO_sub.geojson')
       .then(response => response.json())
       .then(data => {
         L.geoJSON(data).addTo(map);
