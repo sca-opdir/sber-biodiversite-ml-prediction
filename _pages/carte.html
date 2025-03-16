@@ -27,24 +27,31 @@
     }).addTo(map);
 
     // Définir un style basé sur l'attribut "label"
-    function getColor(label) {
-        switch(label) {
-            case "Moins": return "#ff0000"; // Rouge
-            case "Plus": return "#00ff00"; // Vert
-            default: return "#808080"; // Gris par défaut
-        }
+// Définir un style basé sur predicted_label et correct_pred
+function getColor(predicted_label, correct_pred) {
+    if (predicted_label === "Moins" && correct_pred === true) {
+        return "#8B0000"; // Rouge foncé
+    } else if (predicted_label === "Moins" && correct_pred === false) {
+        return "#FF6666"; // Rouge clair fluo
+    } else if (predicted_label === "Plus" && correct_pred === true) {
+        return "#006400"; // Vert foncé
+    } else if (predicted_label === "Plus" && correct_pred === false) {
+        return "#99FF99"; // Vert clair fluo
+    } else {
+        return "#808080"; // Gris par défaut
     }
+}
 
     // Fonction de style appliquée aux polygones
-    function style(feature) {
-        return {
-            fillColor: getColor(feature.properties.predicted_label),
-            weight: 2,
-            opacity: 1,
-            color: "white",
-            fillOpacity: 0.7
-        };
-    }
+function style(feature) {
+    return {
+        fillColor: getColor(feature.properties.predicted_label, feature.properties.correct_pred),
+        weight: 0, // Supprime la bordure
+        opacity: 1,
+        color: "none", // Aucune bordure
+        fillOpacity: 0.7
+    };
+}
 
     // Ajouter la légende à la carte
     var legend = L.control({ position: "bottomright" });
