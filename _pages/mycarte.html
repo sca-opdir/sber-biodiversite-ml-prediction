@@ -15,7 +15,7 @@
     }).addTo(map);
 
     // Charger le fichier GeoJSON
-      fetch('https://sca-opdir.github.io/sber-biodiversite-ml-prediction/assets/trainpred_combined_pixels_withpred_FeaturesToJSO_sub.geojson')
+      fetchfetch('/sber-biodiversite-ml-prediction/assets/trainpred_combined_pixels_withpred_FeaturesToJSO_sub.geojson')
       .then(response => response.json())
       .then(data => {
         L.geoJSON(data).addTo(map);
