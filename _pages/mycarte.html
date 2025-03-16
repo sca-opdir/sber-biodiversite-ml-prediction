@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Carte ArcGIS sur GitHub</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <div id="map" style="width: 100%; height: 600px;"></div>
+  <script>
+    var map = L.map('map').setView([46.2, 7.0], 10); // Modifier les coordonnées
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Charger le fichier GeoJSON
+    fetch('/assets/trainpred_combined_pixels_withpred_FeaturesToJSO_sub.geojson')
+      .then(response => response.json())
+      .then(data => {
+        L.geoJSON(data).addTo(map);
+      });
+  </script>
+</body>
+</html>
+
