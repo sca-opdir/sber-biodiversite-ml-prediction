@@ -36,6 +36,8 @@ En analysant la carte des erreurs de prédictions
 
 Par ailleurs, en regardant la <a href="{{site.baseurl}}/images/train2pred_correct-false_dist.png">distribution des variables environnementales</a>, on remarque que les pixels pour lesquelles la prédiction a été erronnée montrent un décalage des courbes pour les variables relatives au sol (edaph_eiv_r, edaph_eiv_n) et topographique (alti3d_aspect_median, alti3d_hillshade_median, alti3d_dem_median) qui pourrait peut-être expliquer en partie les difficultés de prédiction pour ces pixels-là.
 
+Une carte avec un exemple de résultats est disponible sur <a href="{{ site.baseurl }}/_pages/carte.html">cette page</a>.
+
 ## Résultats de la prédiction sur les données sans label
 
 Le modèle entrainé a ensuite été utilisé pour de l'inférence sur les pixels des polygones de pâturages jamais évalués sur le terrain.
