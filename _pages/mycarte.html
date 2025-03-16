@@ -15,7 +15,7 @@
     }).addTo(map);
 
     // Charger le fichier GeoJSON
-      fetch('{{ site.baseurl }}/assets/sber-biodiversite-ml-prediction/trainpred_combined_pixels_withpred_FeaturesToJSO_sub.geojson')
+      fetch('{{ site.baseurl }}/assets/trainpred_combined_pixels_withpred_FeaturesToJSO_sub.geojson')
       .then(response => response.json())
       .then(data => {
         L.geoJSON(data).addTo(map);
