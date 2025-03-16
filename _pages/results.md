@@ -90,7 +90,7 @@ Afin de consolider les résultats obtenus avec ce jeu de données environnementa
     - Ces résultats sont en partie en tout cas cohérents avec les observations de terrain. Il est intéressant de constater que parmi les variables qui semblent les plus impactantes pour la prédiction, certaines d'entre elles ressortaient déjà comme ayant le plus de poids dans le modèle neuronal (humus, humidité, phosphore).
   
 * remplacer les données de contrôles au format "polygones" par les données brutes type "relevés" ([notebook](https://www.kaggle.com/code/mzufferey/sber-nn-relev-s-p-t)),
-* remplacer les variables environnementales par des données sentinel-2 (résolution 10 m ; [notebook](https://www.kaggle.com/code/mzufferey/ffn-sber-paturagev4-sentinel).
+* remplacer les variables environnementales par des données sentinel-2 (résolution 10 m ; [notebook](https://www.kaggle.com/code/mzufferey/ffn-sber-paturagev4-sentinel)).
 
 <div align="center">
   <img src="{{site.baseurl}}/images/sentinel_apprentissage_et_poids.png" alt="Résultats de l'apprentissage avec les données Sentinel-2" width="600"/>
